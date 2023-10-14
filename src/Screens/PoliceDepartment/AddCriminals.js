@@ -1,6 +1,5 @@
 import react, { useState } from "react";
-import { Text, View, TextInput, StyleSheet, TouchableOpacity, Button, Pressable } from "react-native";
-import { Picker } from "@react-native-picker/picker";
+import { Text, View, TextInput, StyleSheet, Button, Pressable } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { launchImageLibrary } from 'react-native-image-picker';
 import { useApplicationProvider } from "../../context/applicationContext";
