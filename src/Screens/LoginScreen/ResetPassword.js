@@ -19,8 +19,7 @@ const ResetPassword = ({navigation}) => {
     };
 
     const handleVerifyOTP = () => {
-        // return navigation.navigate('UpdatePassword',{email, role})
-        // Send email and OTP to the server for verification
+
         fetch(`http://${ip}:3001/verify-otp`, {
           method: 'POST',
           headers: {

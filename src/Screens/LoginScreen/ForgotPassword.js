@@ -54,9 +54,8 @@ const ForgotPassword = ({ navigation }) => {
         .then((response) => response.json())
         .then((data) => {
           if (data.exists) {
-            // Email exists in the database, navigate to ResetPasswordScreen
+            
             navigation.navigate('ResetPassword', { email, role });
-            // calling sendOtp function to send otp
             sendOTP();
           } else {
             Alert.alert('Email does not exist !');
@@ -73,11 +72,9 @@ const ForgotPassword = ({ navigation }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // increment the colorIndex state variable by 1 (wrapping around to 0 if necessary)
       setColor((color + 1) % colors.length);
     }, 500); // set interval to 2 seconds
 
-    // clear interval when component unmounts to avoid memory leaks
     return () => clearInterval(interval);
   }, [color]);
 
