@@ -3,9 +3,7 @@ import { Text, View, StyleSheet, TextInput, Button, Pressable, TouchableOpacity,
 import { useState, useEffect } from "react";
 import { ImageBackground } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import { Signup } from "./Signup";
-import { ForgotPassword } from "./ForgotPassword";
-import { Citizen } from "../Citizen/Citizen";
+
 import { emailValidator } from "../../validators/emailValidator";
 import { useApplicationProvider } from "../../context/applicationContext";
 import { ip } from "../../ip";
@@ -136,7 +134,6 @@ const Signin = ({ navigation }) => {
         console.log("Error! uploading to server: %s", error);
       }
     }
-    // IF the selected Role is as police
     else if (selectedRole === "police") {
       // return navigation.navigate('PoliceHome')
       try {

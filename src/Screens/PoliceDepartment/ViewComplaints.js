@@ -2,15 +2,12 @@ import React from "react";
 import { Text, View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { ip } from "../../ip";
 import { useState, useEffect } from "react";
-import { Table, Row } from "react-native-table-component";
 import { Image } from "react-native";
 
 const ViewComplaints = () => {
   const [crimes, setCrimes] = useState([{}]);
   const [selectedStatus, setSelectedStatus] = useState(null);
-
-  const cloudinaryUrl = "https://api.cloudinary.com/v1_1/dlrea1e3l/image/upload";
-  
+    
   useEffect(() => {
     const getCrime = async () => {
       try {

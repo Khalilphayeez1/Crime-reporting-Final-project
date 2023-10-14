@@ -106,7 +106,7 @@ let handleSubmit;
                 console.log('Error! uploading to server: %s', error);
             }
         } else if (selectedRole === 'admin') {
-            return alert('You can not create account as Admin');
+
             try {
                 let dataToSend = {
                     email,
